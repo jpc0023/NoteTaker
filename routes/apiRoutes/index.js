@@ -1,10 +1,5 @@
-const path = require('path');
-const fs =require('fs');
-
-const id = [];
-
-router.get('/api/notes', (req, res) => {
-    res.sendFile(path.join(__dirname, '../db/db.json'));
-};)
+const router = require('express').Router();
+const notes = require('../apiRoutes/notesRoutes');
+router.use(notes);
 
 module.exports = router;
